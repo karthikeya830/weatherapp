@@ -2,9 +2,98 @@
   width: 60%;
   margin: 0 auto;
   padding-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .center{
   margin-top: 20px;
   text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.card{
+  height: fit-content;
+  width: fit-content;
+  padding: 20px;
+  background-color: #333;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.top{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.city-name{
+  font-size: 20px;
+}
+
+.city-desc{
+  font-size: 10px;
+}
+
+.bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp{
+  font-size: 3.5em;
+}
+
+.detail{
+  display: flex;
+  flex-direction: column;
+}
+
+.heading{
+  text-align: center;
+}
+
+.params{
+  display: flex;
+  flex-direction: column;
+}
+
+.param{
+  display: flex;
+}
+
+.p11{
+  font-size: 10px;
+}
+
+.p12{
+  font-size : 10px;
 }

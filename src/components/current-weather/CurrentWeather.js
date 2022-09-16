@@ -1,42 +1,49 @@
-import React from 'react'
-import './CurrentWeather.css'
+import React from "react";
+import "./CurrentWeather.css";
 
-const CurrentWeather = ({data}) => {
+const CurrentWeather = ({ data }) => {
   return (
-    <div className="weather">
-      <div className="top">
-        <div>
-          <p className="city-name">{data.city}</p>
-          <p className="weather-description">{data.weather[0].description}</p>
+    <>
+      <div className="main">
+        <div className="card">
+          <div className="top">
+            <div className="city-details">
+              <div className="city-name">{data.city}</div>
+              <div className="city-desc">{data.weather[0].description}</div>
+            </div>
+            <div className="image">
+            <img alt="weather" className="weather-icon" src="icons/01d.png" />
+            </div>
+          </div>
+          <div className="bottom">
+            <div className="temp">{Math.round(data.main.temp)}°C</div>
+            <div className="detail">
+              <div className="heading">Details</div>
+              <div className="params">
+                <div className="param">
+                  <div className="p11">Feels Like</div>
+                  <div className="p12">{Math.round(data.main.feels_like)}°C</div>
+                </div>
+                <div className="param">
+                  <div className="p11">Wind</div>
+                  <div className="p12">{data.wind.speed}m/s</div>
+                </div>
+                <div className="param">
+                  <div className="p11">Humidity</div>
+                  <div className="p12">{data.main.humidity}%</div>
+                </div>
+                <div className="param">
+                  <div className="p11">Pressure</div>
+                  <div className="p12">{data.main.pressure} hPa</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <img alt="weather" className="weather-icon" src="icons/01d.png" />
       </div>
-      <div className="bottom">
-        <p className="temperature">{Math.round(data.main.temp)}°C</p>
-        <div className="details">
-          <div className="parameter-row">
-            <span className="parameter-label top">Details</span>
-          </div>
-          <div className="parameter-row">
-            <span className="parameter-label">Feels like</span>
-            <span className="parameter-value">{Math.round(data.main.feels_like)}°C</span>
-          </div>
-          <div className="parameter-row">
-            <span className="parameter-label">Wind</span>
-            <span className="parameter-value">{data.wind.speed}m/s</span>
-          </div>
-          <div className="parameter-row">
-            <span className="parameter-label">Humidity</span>
-            <span className="parameter-value">{data.main.humidity}%</span>
-          </div>
-          <div className="parameter-row">
-            <span className="parameter-label">Pressure</span>
-            <span className="parameter-value">{data.main.pressure} hPa</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
+
+    </>
+  );
+};
 
 export default CurrentWeather;

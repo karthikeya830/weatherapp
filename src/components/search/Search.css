@@ -1,3 +1,11 @@
 .search{
-    margin: 10px 100px 100px 100px;
+    margin-left: 100px;
+    margin-right: 150px;
+}
+@media screen and (max-width: 480px) {
+    .search{
+        height: 100%;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 }
