@@ -1,0 +1,26 @@
+.navbar{
+    margin: 0px;
+    background-color: #800080;
+    margin-top: 0px;
+    
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+ul li a{
+    
+    list-style: none;
+    color: rgb(160, 114, 114);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color: #fff;
+}
